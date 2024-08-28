@@ -15,7 +15,7 @@ public class NestedGenericsConfig<T extends ServiceBar> {
     }
 
     // error is shown for the qualifier - `Could not autowire. Qualified bean must be of 'List<T>' type.`
-    @Bean
+    @Bean @Qualifier("b_qualifier")
     public List<T> qualifiedBarList(@Qualifier("b_qualifier") List<T> bars) {
         return bars;
     }

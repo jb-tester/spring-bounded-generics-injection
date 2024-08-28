@@ -12,10 +12,12 @@ public class InjectListOfListOfBoundedTypes<T extends ServiceBar> {
     private final List<List<T>> barList;
     private final List<List<T>> qualifiedBarList;
 
-   // error is shown: `Could not autowire. Qualified bean must be of 'List<List<T>>' type.`
-    public InjectListOfListOfBoundedTypes(List<List<T>> barList, @Qualifier("qualifiedBarList") List<List<T>> qualifiedBarList) {
+   // `navigation doesn't work for the second parameter (`qualifiedBarList`)
+    public InjectListOfListOfBoundedTypes(
+            List<List<T>> barList,
+            @Qualifier("qualifiedBarList") List<List<T>> qBarsList) {
         this.barList = barList;
-        this.qualifiedBarList = qualifiedBarList;
+        this.qualifiedBarList = qBarsList;
     }
 
     public void displayMethod() {
