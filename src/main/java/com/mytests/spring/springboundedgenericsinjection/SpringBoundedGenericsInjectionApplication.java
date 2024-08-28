@@ -19,7 +19,7 @@ public class SpringBoundedGenericsInjectionApplication {
                                                InjectMultiBoundGenericsInConstructorByTypeFooBarAndName injectGenericsInConstructor,
                                                InjectFewSingleBoundGenericsInConstructorByTypesFooAndBarAndName injectGenericsInConstructor2,
                                                InjectSingleBoundGenericInConstructorByTypeFooAndName injectSingleBoundGenericInConstructorByTypeFooAndName,
-                                               InjectListOfSingleBoundGenericInConstructorByTypeBar injectListOfSingleBoundGenericInConstructorByTypeBar,
+                                               InjectListOfSingleBoundGenericInConstructorByTypeFoo injectListOfSingleBoundGenericInConstructorByTypeFoo,
                                                InjectListOfListOfBoundedTypes injectListOfListOfGenerics) {
         return args -> {
             System.out.println("--------------------------------------");
@@ -27,7 +27,7 @@ public class SpringBoundedGenericsInjectionApplication {
             injectGenericsInConstructor.displayMethod();
             injectGenericsInConstructor2.displayMethod();
             injectSingleBoundGenericInConstructorByTypeFooAndName.displayMethod();
-            injectListOfSingleBoundGenericInConstructorByTypeBar.displayMethod();
+            injectListOfSingleBoundGenericInConstructorByTypeFoo.displayMethod();
             injectListOfListOfGenerics.displayMethod();
             System.out.println("--------------------------------------");
         };
