@@ -7,3 +7,6 @@ Note that the case from `com.mytests.spring.springboundedgenericsinjection.gener
 is supported in Spring 6.2 only.
 
 Other cases work in the previous Spring versions too.
+
+
+https://youtrack.jetbrains.com/issue/IDEA-358446/Spring-support-the-bounded-generics-injection-properly
